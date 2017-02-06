@@ -10,7 +10,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 0;
   background: orange; /* For browsers that do not support gradients */
   background: linear-gradient(to bottom right, rgba(255,140,10,0.9), rgba(255,151,76,0.8)); /*Standard*/
