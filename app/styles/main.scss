@@ -1,6 +1,11 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "variables";
+@import "content";
+@import "header";
+@import "footer";
 // endbower
 
 .browsehappy {
@@ -20,40 +25,19 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 0;
-  background: orange; /* For browsers that do not support gradients */
-  background: linear-gradient(to bottom right, rgba(255,140,10,0.9), rgba(255,151,76,0.8)); /*Standard*/
-  background: -webkit-linear-gradient(left top,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(bottom right,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(bottom right,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Fx 3.6-15*/
+
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+#body-container {
+  min-height: 100%;
+  position: relative;
 }
 
-/* Custom page header */
-.header {
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
 
 /* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+
+
+
 
 .container-narrow > hr {
   margin: 30px 0;
@@ -109,7 +93,7 @@ body {
 /* Phone size settings */
 @media screen and (max-width: 768px) {
   .navbar li {
-    background-color: lightgray;
+    background-color: inherit;
     border: none;
   }
 }

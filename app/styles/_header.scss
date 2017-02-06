@@ -1,0 +1,16 @@
+.header {
+  padding-left: 15px;
+  padding-right: 15px;
+  background: linear-gradient(to bottom right, rgba(255,140,10,0.9), rgba(255,151,76,0.8)); /*Standard*/
+  background: -webkit-linear-gradient(left top,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom right,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom right,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Fx 3.6-15*/
+}
+
+#body-container .header li a {
+  color: $gray-base;
+}
+
+#body-container .header li a:hover {
+  color: $gray;
+}
