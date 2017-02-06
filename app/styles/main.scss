@@ -99,9 +99,17 @@ body {
 }
 
 .navbar-nav ul li a {
-  height: 80px !important;
+  height: 80px;
 }
 
 .navbar-brand {
   height: 80px;
+}
+
+/* Phone size settings */
+@media screen and (max-width: 768px) {
+  .navbar li {
+    background-color: lightgray;
+    border: none;
+  }
 }
