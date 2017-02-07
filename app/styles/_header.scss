@@ -1,10 +1,10 @@
 .header {
   padding-left: 15px;
   padding-right: 15px;
-  background: linear-gradient(to bottom right, rgba(255,140,10,0.9), rgba(255,151,76,0.8)); /*Standard*/
-  background: -webkit-linear-gradient(left top,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(bottom right,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(bottom right,rgba(255,140,10,0.9),rgba(255,151,76,0.8)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, rgba(255,140,10,0.9), rgba(255,151,76,0.5)); /*Standard*/
+  background: -webkit-linear-gradient(top, rgba(255,140,10,0.9),rgba(255,151,76,0.5)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom, rgba(255,140,10,0.9),rgba(255,151,76,0.5)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom, rgba(255,140,10,0.9),rgba(255,151,76,0.5)); /*Fx 3.6-15*/
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -27,13 +27,13 @@
 .navbar {
   background: none;
   border: none;
-  height: 80px;
+
 }
 
-.navbar-nav ul li a {
-  height: 80px;
-}
+// .navbar-nav ul li a {
+//   height: 80px;
+// }
 
-.navbar-brand {
-  height: 80px;
-}
+// .navbar-brand {
+//   height: 80px;
+// }
