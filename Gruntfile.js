@@ -54,7 +54,7 @@ module.exports = function (grunt) {
       options: {
         // Task-specific options go here.
       },
-      your_target: {
+      YOUR_TARGET: {
         // Target-specific file lists and/or options go here.
       },
     },
