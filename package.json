@@ -43,5 +43,8 @@
   },
   "scripts": {
     "test": "karma start test\\karma.conf.js"
+  },
+  "dependencies": {
+    "angular2-moment": "^1.1.0"
   }
 }

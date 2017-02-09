@@ -2,13 +2,13 @@
 <h1> random text</h1>
 <h2>still random</h2>
 <div class="row">
-  <div id="reportrange" class="col-xs-6" style="cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-      <span></span> <b class="caret"></b>
+  <div ng-controller="MainCtrl" id="date-range" class="col-xs-6">
+    <form name="dateForm" class="form-horizontal">
+      <div class="form-group">
+        <label for="daterange1" class="controll-label">Simple Picker</label>
+        <input date-range-picker id="daterange1" name="daterange" class="form-control date-picker" type="text" ng-model="date" options="opts" required/>
   </div>
-  <div class="col-xs-2">
-    <button id="get-events-btn" class="btn" ng-click="refreshCurrent()">Get Events</button>
-  </div>
+
 </div>
 <p>Some random text</p>
 <p><a href="">something even more random</a></p>
