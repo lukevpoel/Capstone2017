@@ -13,11 +13,14 @@ angular.module('capstone2017App')
     // ...
 
     // Public API here
-    return $resource('http://api.eventful.com/rest/events/search?q=music&l=:location&within=:distance&units=miles&t=:time&c=music&app_key=mhNWqRwCNqmxbkrL',{}, {
+    return $resource('http://api.eventful.com/rest/events/search?q=music&l=:location&within=:distance&units=miles&t=:time&c=music&keywords=:keyword&app_key=mhNWqRwCNqmxbkrL',{}, {
       query: {
         method:'GET',
         params:{
-          location: 'Seattle,us'
+          location: 'Seattle,us',
+          within: '10',
+          time: 'This Week',
+          keywords: ''
         },
         isArray:false
       }

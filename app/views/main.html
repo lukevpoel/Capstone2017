@@ -4,21 +4,21 @@
   <form action="main.html">
     <div  class="col-xs-3">
       Date: <br>
-      <select ng-model="selectEvent" ng-options="x for x in dates"id="date-range" name="Choose-date" class="date-select">
+      <select ng-model="selectEvent" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field">
       </select>
     </div>
     <div  class="col-xs-3 within-select">
       Within: <br>
-      <select ng-model="selectWithin" ng-options="x for x in within"id="within-range" name="Choose-within" class="within-select">
+      <select ng-model="selectWithin" ng-options="x for x in within"id="within-range" name="Choose-within" class="select-field">
       </select>
     </div>
-    <div  class="col-xs-3 location-select">
+    <div  class="col-xs-3">
       Zip Code: <br>
-      <input type="text">
+      <input type="text" class="select-field">
     </div>
     <div class="col-xs-3">
       <br>
-      <input type="submit" value="submit">
+      <input type="submit" value="submit" class="select-field">
     </div>
   </form>
 </div>
