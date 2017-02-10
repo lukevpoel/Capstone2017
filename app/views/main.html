@@ -1,14 +1,26 @@
-<div class="img"><img src="../images/yeoman.png" alt="test"></div>
-<h1> random text</h1>
-<h2>still random</h2>
+<h1>Find your favorite events</h1>
+<h2>With the artist's best music!</h2>
 <div class="row">
-  <div ng-controller="MainCtrl" id="date-range" class="col-xs-6">
-    <form name="dateForm" class="form-horizontal">
-      <div class="form-group">
-        <label for="daterange1" class="controll-label">Simple Picker</label>
-        <input date-range-picker id="daterange1" name="daterange" class="form-control date-picker" type="text" ng-model="date" options="opts" required/>
-  </div>
-
+  <form action="main.html">
+    <div  class="col-xs-3">
+      Date: <br>
+      <select ng-model="selectEvent" ng-options="x for x in dates"id="date-range" name="Choose-date" class="date-select">
+      </select>
+    </div>
+    <div  class="col-xs-3 within-select">
+      Within: <br>
+      <select ng-model="selectWithin" ng-options="x for x in within"id="within-range" name="Choose-within" class="within-select">
+      </select>
+    </div>
+    <div  class="col-xs-3 location-select">
+      Zip Code: <br>
+      <input type="text">
+    </div>
+    <div class="col-xs-3">
+      <br>
+      <input type="submit" value="submit">
+    </div>
+  </form>
 </div>
 <p>Some random text</p>
 <p><a href="">something even more random</a></p>

@@ -13,19 +13,35 @@
 
 angular.module('capstone2017App')
 
-  .controller('MainCtrl', function ($scope, events, moment) {
-    $scope.events = events.query();
+  .controller('MainCtrl', function ($scope, events) {
 
-    $scope.datePicker = {
-      startDate: null,
-      endDate: null,
-    };
+    $scope.dates = [
+      'All',
+      'Today',
+      'This Week',
+      'Next Week',
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
 
-    $scope.refreshCurrent = function(){
-        $scope.events = events.query({
-            location: $scope.location
-        });
-    };
+    $scope.within = [
+      "5",
+      "10",
+      "20",
+      "50",
+      "100"
+    ];
+
 
     this.awesomeThings = [
       'HTML5 Boilerplate',
