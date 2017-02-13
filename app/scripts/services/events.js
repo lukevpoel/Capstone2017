@@ -22,7 +22,7 @@ angular.module('capstone2017App')
           time: 'This Week',
           keywords: ''
         },
-        isArray:false
+        isArray:true
       }
     });
   });

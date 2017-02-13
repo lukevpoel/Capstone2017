@@ -35,14 +35,22 @@ angular.module('capstone2017App')
     ];
 
     $scope.within = [
-      "5",
-      "10",
-      "20",
-      "50",
-      "100"
+      '5',
+      '10',
+      '20',
+      '50',
+      '100'
     ];
 
-    $scope.events = events.query();
+
+    $scope.refreshCurrent = function(){
+        $scope.events = events.query({
+            location: $scope.location,
+            within: $scope.within,
+            time: $scope.time,
+            keywords: $scope.keywords
+        });
+    };
 
 
     this.awesomeThings = [
