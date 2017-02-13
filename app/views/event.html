@@ -1,0 +1,13 @@
+<div ng-app class="content-container row" ng-controller="MainCtrl">
+  <h1>Your events for {{events.location[0]}} {{events.time}}</h1>
+
+    <div ng-init="location='Seattle'">
+      <p>
+        <label for="location">Location:
+          <input type="text" name="location" ng-model="location">
+        </label>
+      </p>
+      <p>
+        <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Check for events</button>
+      </p>
+    <dl>

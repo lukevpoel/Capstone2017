@@ -42,6 +42,8 @@ angular.module('capstone2017App')
       "100"
     ];
 
+    $scope.events = events.query();
+
 
     this.awesomeThings = [
       'HTML5 Boilerplate',
