@@ -2,18 +2,18 @@
 
 /**
  * @ngdoc service
- * @name capstone2017App.events
+ * @name capstone2017App.event
  * @description
- * # events
+ * # event
  * Factory in the capstone2017App.
  */
 angular.module('capstone2017App')
-  .factory('events', function ($resource) {
+  .factory('event', function ($resource) {
     // Service logic
     // ...
 
     // Public API here
-    return $resource('http://api.eventful.com/rest/events/search?q=music&l=:location&within=:distance&units=miles&t=:time&c=music&keywords=:keyword&app_key=mhNWqRwCNqmxbkrL',{}, {
+    return $resource('http://api.eventful.com/json/events/search?q=music&l=:location&within=:distance&units=miles&t=:time&c=music&keywords=:keyword&app_key=mhNWqRwCNqmxbkrL',{}, {
       query: {
         method:'GET',
         params:{

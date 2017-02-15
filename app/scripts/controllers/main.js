@@ -7,13 +7,12 @@
  * # MainCtrl
  * Controller of the capstone2017App
  */
-// , ['daterangepicker']
-// , moment
+
 
 
 angular.module('capstone2017App')
 
-  .controller('MainCtrl', function ($scope, events) {
+  .controller('MainCtrl', function ($scope, event) {
 
     $scope.dates = [
       'All',
@@ -42,9 +41,10 @@ angular.module('capstone2017App')
       '100'
     ];
 
+    $scope.event = event.query();
 
     $scope.refreshCurrent = function(){
-        $scope.events = events.query({
+        $scope.event = event.query({
             location: $scope.location,
             within: $scope.within,
             time: $scope.time,
