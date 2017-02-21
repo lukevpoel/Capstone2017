@@ -21,7 +21,12 @@ angular
     'angularMoment',
     'daterangepicker'
   ])
-  .config(function($routeProvider) {
+  .config(function($locationProvider, $routeProvider) {
+    $locationProvider
+    .html5Mode({
+      enable: true,
+      requireBase: false
+    });
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

@@ -8,9 +8,11 @@
  * Factory in the capstone2017App.
  */
 angular.module('capstone2017App')
-  .factory('event', function ($resource) {
+  .factory('event', function ($resource, response) {
     // Service logic
     // ...
+    response.addHeader('Access-Control-Allow-Origin', '*');
+
 
     // Public API here
     return $resource('http://api.eventful.com/json/events/search?q=music&l=:location&within=:distance&units=miles&t=:time&c=music&keywords=:keyword&app_key=mhNWqRwCNqmxbkrL',{}, {
