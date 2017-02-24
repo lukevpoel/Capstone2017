@@ -12,7 +12,7 @@
 
 angular.module('capstone2017App')
 
-  .controller('MainCtrl', function ($scope, event) {
+  .controller('MainCtrl', function ($scope, events) {
 
     $scope.dates = [
       'All',
@@ -41,10 +41,10 @@ angular.module('capstone2017App')
       '100'
     ];
 
-    $scope.event = event.query();
+    $scope.events = events.query();
 
     $scope.refreshCurrent = function(){
-        $scope.event = event.query({
+        $scope.events = events.query({
             location: $scope.location,
             within: $scope.within,
             time: $scope.time,

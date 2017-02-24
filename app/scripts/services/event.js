@@ -8,10 +8,9 @@
  * Factory in the capstone2017App.
  */
 angular.module('capstone2017App')
-  .factory('event', function ($resource, response) {
+  .factory('event', function ($resource) {
     // Service logic
     // ...
-    response.addHeader('Access-Control-Allow-Origin', '*');
 
 
     // Public API here
