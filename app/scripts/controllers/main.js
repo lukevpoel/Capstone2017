@@ -33,7 +33,7 @@ angular.module('capstone2017App')
       'December'
     ];
 
-    $scope.within = [
+    $scope.distance = [
       '5',
       '10',
       '20',
@@ -51,7 +51,6 @@ angular.module('capstone2017App')
             keywords: $scope.keywords
         });
     };
-
 
     this.awesomeThings = [
       'HTML5 Boilerplate',

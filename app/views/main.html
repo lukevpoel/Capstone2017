@@ -4,23 +4,23 @@
     <div class="row content-container">
         <div  class="col-xs-3">
           Date: <br>
-          <select ng-model="selectEvent" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field">
+          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field">
           </select>
         </div>
         <div  class="col-xs-3 within-select">
           Within: <br>
-          <select ng-model="selectWithin" ng-options="x for x in within"id="within-range" name="Choose-within" class="select-field">
+          <select ng-model="within" ng-options="x for x in distance"id="within-range" name="Choose-within" class="select-field">
           </select>
         </div>
         <div  class="col-xs-3">
           Zip Code: <br>
-          <input type="text" class="select-field">
+          <input ng-model="location" type="text" class="select-field">
         </div>
         <div class="col-xs-3">
           Find your events!<br>
-          <input type="submit" value="submit" class="select-field" ng-click="refreshCurrent()">
+          <button type="submit" value="submit" class="select-field" ng-click="refreshCurrent()">
         </div>
     </div>
-    <p>Some random text</p>
+    <h1>Your events for {{events.events.event[0].city_name}}</h1>
     <p><a href="">something even more random</a></p>
   </div>

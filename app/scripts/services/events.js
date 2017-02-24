@@ -9,7 +9,7 @@
  */
 angular.module('capstone2017App')
   .factory('events', function ($http) {
-    var eventAPI='http://api.eventful.com/json/events/search?app_key=mhNWqRwCNqmxbkrL';
+    var eventAPI='http://api.eventful.com/json/events/search?app_key=mhNWqRwCNqmxbkrL&q=music';
     return {
       query: function(){
         return $http.jsonp(eventAPI, {
@@ -17,7 +17,7 @@ angular.module('capstone2017App')
           params: {
             location: 'Seattle',
             within: '10',
-            time: 'This Week',
+            time: 'This Month',
             keywords: null
           }
         });

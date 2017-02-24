@@ -28,11 +28,11 @@ angular
       // Allow loading from our assets domain.
       'http://api.eventful.com/json/events/**'
     ]);
-    $locationProvider
-    .html5Mode({
-      enable: true,
-      requireBase: false
-    });
+    // $locationProvider
+    // .html5Mode({
+    //   enable: true,
+    //   requireBase: false
+    // });
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
