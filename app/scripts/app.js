@@ -21,7 +21,13 @@ angular
     'angularMoment',
     'daterangepicker'
   ])
-  .config(function($locationProvider, $routeProvider) {
+  .config(function($locationProvider, $routeProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+      // Allow same origin resource loads.
+      'self',
+      // Allow loading from our assets domain.
+      'http://api.eventful.com/json/events/**'
+    ]);
     $locationProvider
     .html5Mode({
       enable: true,
@@ -38,11 +44,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/event', {
-        templateUrl: 'views/event.html',
-        controller: 'EventCtrl',
-        controllerAs: 'event'
-      })
+
       .when('/events', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl',

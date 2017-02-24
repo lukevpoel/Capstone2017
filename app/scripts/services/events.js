@@ -8,16 +8,19 @@
  * Factory in the capstone2017App.
  */
 angular.module('capstone2017App')
-  .factory('events', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
+  .factory('events', function ($http) {
+    var eventAPI='http://api.eventful.com/json/events/search?app_key=mhNWqRwCNqmxbkrL';
     return {
-      someMethod: function () {
-        return meaningOfLife;
+      query: function(){
+        return $http.jsonp(eventAPI, {
+          jsonpCallbackParam: 'callback',
+          params: {
+            location: 'Seattle',
+            within: '10',
+            time: 'This Week',
+            keywords: null
+          }
+        });
       }
     };
   });
