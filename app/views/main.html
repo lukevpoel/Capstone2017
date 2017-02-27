@@ -1,6 +1,7 @@
   <div ng-app class="content-container" ng-controller="MainCtrl">
     <h1>Find your favorite events</h1>
-    <h2>With the artist's best music!</h2>
+    <h2>With the artist's best music!<br>
+    For now, just type in zip code for any functionality</h2>
     <div class="row content-container">
         <div  class="col-xs-3">
           Date: <br>
@@ -21,10 +22,14 @@
           <button type="submit" value="submit" class="select-field" ng-click="refreshCurrent()">
         </div>
     </div>
+
+
     <div ng-if="searchQuery">
       <h1>Your events for {{location}}</h1>
       <!--  edit this line for repeating ng-repeat="event in eventsFound.list" -->
       <!-- this is placeholder to test -->
+      <!-- TODO add in all links and titles, and text to be specific to each event -->
+      <!--TODO Style elements to flow -->
       <div class="col-md-6 event-container">
         <div class="col-xs-12 event-title">
           <h2><a href="{{events.events.event[0].url}}">The Sound of Music</h2>
@@ -120,7 +125,6 @@
           <h2><a href="{{events.events.event[0].url}}">The Sound of Music</h2>
         </div>
 
-:<!--TODO Style elements to flow -->
         <div class="col-lg-6 col-md-12 pic-container">
           <div class="event-pic" style="width:100%;">
             <img src="http://s1.evcdn.com/images/large/I0-001/034/174/012-9.jpeg_/fancynancythemusical-12.jpeg" alt="event picture">
