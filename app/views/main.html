@@ -4,7 +4,7 @@
     <div class="row content-container">
         <div  class="col-xs-3">
           Date: <br>
-          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field">
+          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field" placeholder="Today">
           </select>
         </div>
         <div  class="col-xs-3 within-select">
@@ -14,13 +14,21 @@
         </div>
         <div  class="col-xs-3">
           Zip Code: <br>
-          <input ng-model="location" type="text" class="select-field">
+          <input ng-model="location" type="number" ng-pattern='/^(\d{5}(-\d{4})?|[A-Z]\d[A-Z] *\d[A-Z]\d)$/' class="select-field" id="zip-code" placeholder="98101">
         </div>
         <div class="col-xs-3">
           Find your events!<br>
           <button type="submit" value="submit" class="select-field" ng-click="refreshCurrent()">
         </div>
     </div>
-    <h1>Your events for {{event[0].city_name}}</h1>
-    <p><a href="">something even more random</a></p>
+    <div ng-if="searchQuery">
+      <h1>Your events for {{location}}</h1>
+      <dl ng-repeat="event in eventsFound.list">
+        <dt>{{city.name}}, {{city.sys.country}}</dt>
+        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
+        <dt>Temperature</dt>
+        <dd>{{city.main.temp}} &deg;F</dd>
+        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
+      </dl>
+    </div>
   </div>
