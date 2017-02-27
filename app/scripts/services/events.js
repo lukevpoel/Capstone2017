@@ -21,7 +21,8 @@ angular.module('capstone2017App')
             location: 'Seattle',
             within: '10',
             time: 'This Month',
-            keywords: null
+            keywords: null,
+            'image_sizes': 'block200,large,dropshadow250'
           }
         })
         .then(function(result) {

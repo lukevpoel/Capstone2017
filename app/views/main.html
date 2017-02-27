@@ -4,7 +4,7 @@
     <div class="row content-container">
         <div  class="col-xs-3">
           Date: <br>
-          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field" placeholder="Today">
+          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field">
           </select>
         </div>
         <div  class="col-xs-3 within-select">
@@ -23,12 +23,127 @@
     </div>
     <div ng-if="searchQuery">
       <h1>Your events for {{location}}</h1>
-      <dl ng-repeat="event in eventsFound.list">
-        <dt>{{city.name}}, {{city.sys.country}}</dt>
-        <dd>{{city.weather[0].main}} - {{city.weather[0].description}}</dd>
-        <dt>Temperature</dt>
-        <dd>{{city.main.temp}} &deg;F</dd>
-        <dd><a ng-href="/#/current/{{city.id}}" class="btn btn-lg btn-primary">View Weather</a></dd>
-      </dl>
+      <!--  edit this line for repeating ng-repeat="event in eventsFound.list" -->
+      <!-- this is placeholder to test -->
+      <div class="col-md-6 event-container">
+        <div class="col-xs-12 event-title">
+          <h2><a href="{{events.events.event[0].url}}">The Sound of Music</h2>
+        </div>
+
+        <div class="col-md-6 col-sm-12 pic-container">
+          <div class="event-pic">
+            <img src="http://s1.evcdn.com/images/large/I0-001/034/174/012-9.jpeg_/fancynancythemusical-12.jpeg" alt="event picture">
+          </div>
+        </div>
+        <div class="event-desc col-md-6 col-sm-12">
+          <dl>
+            <dt>Event Description</dt>
+            <dd>do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do,
+            do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do</dd>
+
+            <dt>Location</dt>
+            <dd>City, ST</dd>
+            <dd><a href="" alt="venue link">Venue(link)</a></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+          </dl>
+        </div>
+      </div>
+
+      <div class="col-md-6 event-container">
+        <div class="col-xs-12 event-title">
+          <h2><a href="{{events.events.event[0].url}}">The Sound of Music</h2>
+        </div>
+
+        <div class="col-md-6 col-sm-12 pic-container">
+          <div class="event-pic">
+            <img src="http://s1.evcdn.com/images/large/I0-001/034/174/012-9.jpeg_/fancynancythemusical-12.jpeg" alt="event picture">
+          </div>
+        </div>
+        <div class="event-desc col-md-6 col-sm-12">
+          <dl>
+            <dt>Event Description</dt>
+            <dd>do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do,
+            do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do</dd>
+
+            <dt>Location</dt>
+            <dd>City, ST</dd>
+            <dd><a href="" alt="venue link">Venue(link)</a></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+          </dl>
+        </div>
+      </div>
+
+      <div class="col-md-6 event-container">
+        <div class="col-xs-12 event-title">
+          <h2><a href="{{events.events.event[0].url}}">The Sound of Music</h2>
+        </div>
+
+        <div class="col-md-6 col-sm-12 pic-container">
+          <div class="event-pic">
+            <img src="http://s1.evcdn.com/images/large/I0-001/034/174/012-9.jpeg_/fancynancythemusical-12.jpeg" alt="event picture">
+          </div>
+        </div>
+        <div class="event-desc col-md-6 col-sm-12">
+          <dl>
+            <dt>Event Description</dt>
+            <dd>do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do,
+            do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do</dd>
+
+            <dt>Location</dt>
+            <dd>City, ST</dd>
+            <dd><a href="" alt="venue link">Venue(link)</a></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+          </dl>
+        </div>
+      </div>
+
+      <div class="col-md-6 event-container">
+        <div class="col-xs-12 event-title">
+          <h2><a href="{{events.events.event[0].url}}">The Sound of Music</h2>
+        </div>
+
+:<!--TODO Style elements to flow -->
+        <div class="col-lg-6 col-md-12 pic-container">
+          <div class="event-pic" style="width:100%;">
+            <img src="http://s1.evcdn.com/images/large/I0-001/034/174/012-9.jpeg_/fancynancythemusical-12.jpeg" alt="event picture">
+          </div>
+        </div>
+        <div class="event-desc col-lg-6 col-md-12">
+          <dl>
+            <dt>Event Description</dt>
+            <dd>do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do, do-re-mi-fa-so-la-ti-do,
+            do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do,do-re-mi-fa-so-la-ti-do</dd>
+
+            <dt>Location</dt>
+            <dd>City, ST</dd>
+            <dd><a href="" alt="venue link">Venue(link)</a></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+            <dt></dt>
+            <dd></dd>
+
+          </dl>
+        </div>
+      </div>
     </div>
   </div>
