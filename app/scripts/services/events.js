@@ -8,8 +8,9 @@
  * Factory in the capstone2017App.
  */
 angular.module('capstone2017App')
-  .factory('events', function ($http) {
+  .factory('events', function ($http, $sce) {
     var eventAPI='http://api.eventful.com/json/events/search';
+    $sce.trustAsResourceUrl(eventAPI);
     return {
       query: function(){
         return $http.jsonp(eventAPI, {
@@ -22,6 +23,8 @@ angular.module('capstone2017App')
             time: 'This Month',
             keywords: null
           }
+        }).then(function(data) {
+          console.log(data);
         });
       }
     };
