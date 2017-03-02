@@ -1,29 +1,17 @@
-<div ng-app class="content-container row" ng-controller="MainCtrl">
-  <h1>Your events for {{events.location[0]}} {{events.time}}</h1>
-
-    <div ng-init="location='Seattle'">
-      <p>
-        <label for="location">Location:
-          <input type="text" name="location" ng-model="location">
-        </label>
-      </p>
-      <p>
-        <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Check for events</button>
-      </p>
+<div ng-app class="content-container" ng-controller="MainCtrl">
+  <h1>Your events within {{within}} miles of {{location}} for {{time}}</h1>
+        <dl ng-repeat>
+          <dt>{{eventdata.event[0].title}}</dt>
+          <dd>at {{eventdata.event[0].}}</dd>
+          <dd>Map link?</dd>
+          <dt>Performers:</dt>
+          <dd>{{eventdata.event[0].}}
+        </dl>
       <div class="col-sm-6">
-          <dl>
-            <dt>{{events.title[0]}}</dt>
-            <dd>at {{events.venue_name[0]}}</dd>
-            <dd>Map link?</dd>
-            <dt>Performers:</dt>
-            <dd>{{events.performers[0]}}
-          </dl>
-      </div>
-      <div class="col-sm-6">
-        <img src="{{events.image.medium.url[0]}}" alt="event image">
+        <img src="{{eventdata.event[0].url[0]}}" alt="event image">
       </div>
       <div class="eventful-badge eventful-small col-xs-12">
         <img src="http://api.eventful.com/images/powered/eventful_58x20.gif" alt="Local Events, Concerts, Tickets">
         <p><a href="http://eventful.com/">Events</a> by Eventful</p>
       </div>
-    </div>
+</div>

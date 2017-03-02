@@ -9,6 +9,8 @@
  */
 angular.module('capstone2017App')
   .controller('EventsCtrl', function () {
+
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

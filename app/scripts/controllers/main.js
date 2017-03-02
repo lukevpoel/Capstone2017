@@ -33,8 +33,9 @@ angular.module('capstone2017App')
       'December'
     ];
 
-    $scope.location = '';
-
+    $scope.location = null;
+    $scope.time = null;
+    $scope.within = null;
     $scope.distance = [
       '5',
       '10',
@@ -42,18 +43,21 @@ angular.module('capstone2017App')
       '50',
       '100'
     ];
+    $scope.keywords = null;
 
-    $scope.events = events.query();
-
-    $scope.refreshCurrent = function(){
+    $scope.refreshCurrent = function(time, within, location, keywords){
         $scope.events = events.query({
-          params: {
-            location: $scope.location,
-            within: $scope.distance,
-            time: $scope.dates
-          }
+          location: location,
+          within: within,
+          time: time,
+          keywords: keywords
+        }).then(function(data){
+          $scope.eventdata = data.data.events;
         });
-        $scope.searchQuery = $scope.location;
+        $scope.searchLocation = $scope.location;
+        $scope.searchWithin = $scope.within;
+        $scope.searchKeyword = $scope.keywords;
+        $scope.searchTime = $scope.time;
     };
 
     this.awesomeThings = [
