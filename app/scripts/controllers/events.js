@@ -8,10 +8,9 @@
  * Controller of the capstone2017App
  */
 angular.module('capstone2017App')
-  .controller('EventsCtrl', function ($scope, $routeParams, events) {
-    $scope.cityID = $routeParams.cityID;
+  .controller('EventsCtrl', function () {
 
-    
+
 
 
     this.awesomeThings = [
