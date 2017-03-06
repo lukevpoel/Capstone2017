@@ -1,4 +1,4 @@
-  <div ng-app class="content-container" ng-controller="MainCtrl">
+  <div ng-controller="MainCtrl">
     <h1>Find your favorite events</h1>
     <h2>With the artist's best music!<br>
     For now, just type in zip code for any functionality</h2>
@@ -26,7 +26,7 @@
           <a class="select-field btn btn-lg btn-primary" ng-click="refreshCurrent(time, within, location, keywords)">Find events!</a>
         </div>
     </div>
-    {{eventdata.event[0].city_name}}
+    <div id="event-container">
     <!-- <div ng-if="searchLocation || searchWithin || searchKeyword || searchTime" class="eventsFound"> -->
                 <h1>Your events
                   <span ng-if="searchLocation == null">in {{eventdata[0].city_name}} etc.</span>
@@ -34,27 +34,37 @@
                   <span ng-if="searchWithin && searchLocation">within {{within}} miles of {{location}}</span>
                   <span ng-if="searchTime"> for {{time}}</span></h1>
                 <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-md-6">
-                  <div class="col-xs-12"><h2><a href="event.url" alt="event link">{{event.title}}</a></h2></div>
-                  <div class="col-sm-6 col-xs-12"> <div ng-if="event.image == null"><img src="images/sixteenth-note.jpg" alt="placeholder image"></div>
-                       <div ng-if="event.image"><img src="{{event.image.block200.url}}" alt="{{event.title}} Image"></div>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">at {{event.venue_name}}
-                    <div ng-if="event.performers">Performers are
-                      <span ng-if="event.performers.performer.name">
-                        {{event.performers.performer.name}}
-                      </span>
-                      <div ng-if="event.performers.performer.length" ng-repeat="performer for event.performers.performer">
-                        <div>
-                          hey
+                  <div class="event-height">
+                    <div class="col-xs-12"><h2><a ng-href="#!/events/{{event.id}}" alt="event link">{{event.title}}</a></h2></div>
+                    <div class="row">
+                      <div class="col-sm-6 col-xs-12 ind-events">
+                        <div class="interior-events">
+                          <div ng-if="event.image == null"><img src="images/sixteenth-note.jpg" class="event-image" alt="placeholder image"></div>
+                          <div ng-if="event.image"><img src="{{event.image.large.url}}" class="event-image" alt="{{event.title}} Image"></div>
                         </div>
                       </div>
+                      <div class="col-sm-6 col-xs-12 ind-events">
+                        <div class="interior-events">
+                          <a href="{{event.venue_url}}" alt="venue link">at {{event.venue_name}}</a>
+                            <div ng-if="event.performers">Performed by
+                              <span ng-if="event.performers.performer.name">
+                                {{event.performers.performer.name}}
+                              </span>
+                              <div ng-if="event.performers.performer.length" ng-repeat="performer for event.performers.performer">
+                                <div>
+                                  hey
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
-
-
-
-                  </div>
+                      <div class="col-xs-12">
+                      </div>
+                    </div>
                 </div>
     <!-- </div> -->
+    </div>
 
 
   </div>

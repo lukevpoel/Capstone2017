@@ -41,7 +41,7 @@ angular
         controllerAs: 'about'
       })
 
-      .when('/events', {
+      .when('/events/:eventID', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl',
         controllerAs: 'events'
