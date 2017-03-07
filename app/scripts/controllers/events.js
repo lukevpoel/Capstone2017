@@ -9,13 +9,18 @@
  */
 angular.module('capstone2017App')
   .controller('EventsCtrl', function ($scope, $route, $routeParams, $location, indevents) {
-    $scope.eventID = $routeParams.eventID;
-    $scope.refreshCurrent = function(eventID) {
-      $scope.indevents = indevents.query ({
-        id: eventID
-      });
-    };
+    $scope.numbers = [
+      '5',
+      '10',
+      '20',
+      '50',
+      '100'
+    ];
 
+    $scope.eventID = $routeParams.eventID;
+    $scope.indevents = indevents.query ({
+      id: $scope.eventID
+    });
 
 
     this.awesomeThings = [
