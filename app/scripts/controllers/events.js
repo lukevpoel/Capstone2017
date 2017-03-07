@@ -9,12 +9,12 @@
  */
 angular.module('capstone2017App')
   .controller('EventsCtrl', function ($scope, $route, $routeParams, $location, indevents) {
-
     $scope.eventID = $routeParams.eventID;
     $scope.indevents = indevents.query ({
       id: $scope.eventID
     }).then(function(data){
       $scope.eventdata = data.data;
+      $scope.imagesArray = angular.isArray(data.data.images.image);
     });
 
 

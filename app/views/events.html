@@ -1,11 +1,24 @@
 <div ng-controller="EventsCtrl">
-  <h1>Your events within {{within}} miles of {{location}} for {{time}}</h1>
-  <a class="select-field btn btn-lg btn-primary" ng-click="refreshCurrent">Find events!</a>
-        <dl>
-          <dt>{{eventdata.title}}</dt>
-          <dd>at {{eventdata.event}}</dd>
-          <dd>Map link?</dd>
-          <dt>Performers:</dt>
-          <dd>{{eventdata.event}}
-        </dl>
+        <div class="col-xs-12">
+          <h2>{{eventdata.title}}</h2>
+          <h4><a href="{{eventdata.url}}">View on Eventful</a></h4>
+        </div>
+        <div class="col-xs-6 event-images">
+          <div ng-if="eventdata.images != null">
+            <img  ng-if="imagesArray" src="{{eventdata.images.image[0].large.url}}">
+            <img ng-if="imagesArray==false" src="{{eventdata.images.image.large.url}}">
+          </div>
+          <div ng-if="eventdata.images == null">
+            <img src="images/sixteenth-note.jpg" alt="placeholder image">
+          </div>
+        </div>
+        <div class="col-xs-6">
+
+
+
+        </div>
+        <div class="col-xs-6">
+          <p>{{eventdata.title}} is at {{eventdata.venue_name}}</p>
+          <p>Maps to the event {{eventdata.address}}, {{eventdata.city}}, {{eventdata.region}} {{eventdata.postal_code}}</p>
+        </div>
 </div>

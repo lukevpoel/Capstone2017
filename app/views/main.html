@@ -27,7 +27,7 @@
         </div>
     </div>
     <div id="event-container">
-    <!-- <div ng-if="searchLocation || searchWithin || searchKeyword || searchTime" class="eventsFound"> -->
+      <div ng-if="searchLocation || searchWithin || searchKeyword || searchTime" class="eventsFound">
                 <h1>Your events
                   <span ng-if="searchLocation == null">in {{eventdata[0].city_name}} etc.</span>
                   <span ng-if="searchWithin == null && searchLocation">in {{location}}</span>
@@ -58,7 +58,7 @@
                       </div>
                     </div>
                 </div>
-    <!-- </div> -->
+      </div>
     </div>
 
 
