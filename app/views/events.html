@@ -5,15 +5,17 @@
         </div>
         <div class="col-xs-6 event-images">
           <div ng-if="eventdata.images != null">
-            <img  ng-if="imagesArray" src="{{eventdata.images.image[0].large.url}}">
+            <div  ng-if="imagesArray" >
+              <img src="{{eventdata.images.image[0].large.url}}">
+            </div>
             <img ng-if="imagesArray==false" src="{{eventdata.images.image.large.url}}">
           </div>
           <div ng-if="eventdata.images == null">
             <img src="images/sixteenth-note.jpg" alt="placeholder image">
           </div>
         </div>
-        <div class="col-xs-6">
-
+        <div class="col-xs-12">
+          <leaflet></leaflet>
 
 
         </div>

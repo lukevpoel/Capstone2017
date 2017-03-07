@@ -16,6 +16,11 @@ angular.module('capstone2017App')
       $scope.eventdata = data.data;
       $scope.imagesArray = angular.isArray(data.data.images.image);
     });
+    angular.extend($scope, {
+      defaults: {
+        scrollWheelZoom: false
+      }
+    });
 
 
     this.awesomeThings = [
