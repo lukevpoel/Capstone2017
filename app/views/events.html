@@ -1,10 +1,8 @@
 <div ng-controller="EventsCtrl">
   <h1>Your events within {{within}} miles of {{location}} for {{time}}</h1>
   <a class="select-field btn btn-lg btn-primary" ng-click="refreshCurrent">Find events!</a>
-  <select ng-model="within" ng-options="x for x in numbers"id="within-range" name="Choose-within" class="select-field">
-  </select>
         <dl>
-          <dt>{{eventdata.event.title}}</dt>
+          <dt>{{eventdata.title}}</dt>
           <dd>at {{eventdata.event}}</dd>
           <dd>Map link?</dd>
           <dt>Performers:</dt>
