@@ -9,7 +9,7 @@
  */
 angular.module('capstone2017App')
   .factory('indevents', function ($http) {
-    var indEventAPI = 'http://api.eventful.com/json/events/search';
+    var indEventAPI = 'http://api.eventful.com/json/events/get';
     return {
       query: function(indeventparams){
         return $http.jsonp(indEventAPI, {

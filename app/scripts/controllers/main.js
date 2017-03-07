@@ -14,10 +14,6 @@ angular.module('capstone2017App')
 
   .controller('MainCtrl', function ($scope, $route, $routeParams, $location, events) {
 
-    this.$route = $route;
-    this.$location = $location;
-    this.$routeParams = $routeParams;
-
     $scope.dates = [
       'All',
       'Today',
