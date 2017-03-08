@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'angularMoment',
-    'daterangepicker'
+    'daterangepicker',
+    'ngMap'
   ])
   .config(function($locationProvider, $routeProvider, $sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
@@ -28,6 +29,7 @@ angular
       // Allow loading from our assets domain.
       'http://api.eventful.com/json/events/**'
     ]);
+
 
     $routeProvider
       .when('/', {

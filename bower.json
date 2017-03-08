@@ -14,7 +14,8 @@
     "angular-touch": "^1.4.0",
     "angular-daterangepicker": "^0.2.2",
     "moment": "^2.17.1",
-    "angular-moment": "^1.0.1"
+    "angular-moment": "^1.0.1",
+    "ngmap": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0",

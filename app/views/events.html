@@ -14,12 +14,25 @@
             <img src="images/sixteenth-note.jpg" alt="placeholder image">
           </div>
         </div>
-        <div class="col-xs-12">
-          <leaflet></leaflet>
-
-
+        <div id="map" class="col-xs-12">
+          <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
+            <ng-map default-style="true" center="{{eventdata.latitude}},{{eventdata.longitude}}" zoom="8">
+              <marker
+                id="eventmarker"
+                position="{{eventdata.latitude}},{{eventdata.longitude}}"
+                title="{{eventdata.venue_name}}"
+                on-click="map.showInfoWindow('markerPopup')">
+              </marker>
+              <info-window id="markerPopup">
+                <div ng-non-bindable>
+                  {{eventdata.location}}<br/>
+                  {{eventdata.address}}<br/>
+                </div>
+              </info-window>
+            </ng-map>
+          </div>
         </div>
-        <div class="col-xs-6">
+        <div class="row">
           <p>{{eventdata.title}} is at {{eventdata.venue_name}}</p>
           <p>Maps to the event {{eventdata.address}}, {{eventdata.city}}, {{eventdata.region}} {{eventdata.postal_code}}</p>
         </div>

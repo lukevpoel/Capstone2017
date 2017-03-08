@@ -36,6 +36,7 @@ module.exports = function(config) {
       'bower_components/bootstrap-daterangepicker/daterangepicker.js',
       'bower_components/angular-daterangepicker/js/angular-daterangepicker.js',
       'bower_components/angular-moment/angular-moment.js',
+      'bower_components/ngmap/build/scripts/ng-map.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/SHA-1/sha1.js',
       'bower_components/angulartics/src/angulartics.js',
