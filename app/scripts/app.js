@@ -18,8 +18,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'angularMoment',
-    'daterangepicker',
     'ngMap'
   ])
   .config(function($locationProvider, $routeProvider, $sceDelegateProvider) {
