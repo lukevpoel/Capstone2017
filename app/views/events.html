@@ -8,15 +8,12 @@
             <div class="event-images">
               <div ng-if="eventdata.images != null">
                 <div  ng-if="imagesArray">
-                    <div id="slides">
-                      <div>
-                        <carousel interval="myInterval">
-                          <slide ng-repeat="image in eventdata.images.image" active="slide.active">
-                            <img ng-src="{{image.large.url}}">
-                          </slide>
-                        </carousel>
-                      </div>
+                  <!-- carousel slides -->
+                  <div uib-carousel interval="myInterval">
+                    <div uib-slide ng-repeat="slide in eventdata.images.image" index="$index">
+                      <img ng-src="{{slide.large.url}}" style="margin:auto;">
                     </div>
+                  </div>
                 </div>
                 <img ng-if="imagesArray==false" src="{{eventdata.images.image.large.url}}">
               </div>
