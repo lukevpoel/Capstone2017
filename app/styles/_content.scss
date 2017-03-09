@@ -50,4 +50,14 @@ button#get-events-btn.btn {
   color: $gray;
 }
 
+#map {
+  margin-top: 10px;
+}
+
+ng-map {
+  height: 30em;
+  width: 100%;
+
+}
+
 // TODO Style event images and content to change image and sizing for screen size

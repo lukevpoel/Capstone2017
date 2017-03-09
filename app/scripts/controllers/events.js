@@ -18,6 +18,7 @@ angular.module('capstone2017App')
       $scope.imagesArray = angular.isArray(data.data.images.image);
     });
 
+
     // Maps Logic
     $scope.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key=AIzaSyDM09EsXdiZzSBueXZYwxv0fhL2_LXbBAs';
     NgMap.getMap({id:'map'}).then(function(map) {
