@@ -33,7 +33,7 @@
                   <span ng-if="searchWithin == null && searchLocation">in {{location}}</span>
                   <span ng-if="searchWithin && searchLocation">within {{within}} miles of {{location}}</span>
                   <span ng-if="searchTime"> for {{time}}</span></h1>
-                <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-md-6">
+                <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                   <div class="event-height">
                     <div class="col-xs-12"><h2><a ng-href="#!/events/{{event.id}}" alt="event link">{{event.title}}</a></h2></div>
                     <div class="row">

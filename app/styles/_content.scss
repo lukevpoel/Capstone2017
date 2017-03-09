@@ -14,26 +14,20 @@ button#get-events-btn.btn {
 }
 
 .event-height {
-  height: 600px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: rgba(255,140,10,0.6);
+  border-width: 10px;
+  border-radius: 10px;
 }
-// button.select-field {
-//   width: 100%;
-//   height: 26px;
-// }
 
 #event-container {
   .ind-events {
     .interior-events {
-      background: rgba(255,140,10,0.9); /* For browsers that do not support gradients */
-      background: -webkit-radial-gradient(rgba(255,140,10,0.6),  rgba(255,140,10,0.0)); /* Safari 5.1 to 6.0 */
-      background: -o-radial-gradient(rgba(255,140,10,0.6),  rgba(255,140,10,0.0)); /* For Opera 11.6 to 12.0 */
-      background: -moz-radial-gradient(rgba(255,140,10,0.6),  rgba(255,140,10,0.0)); /* For Firefox 3.6 to 15 */
-      background: radial-gradient(rgba(255,140,10,0.6),  rgba(255,140,10,0.0)); /* Standard syntax */
       margin: 5px;
       padding: 5px;
     }
   padding: 5px;
-  background: rgba(255,140,10,0.5); /* For browsers that do not support gradients */
   }
 
   .event-image {
@@ -46,6 +40,14 @@ button#get-events-btn.btn {
 
 .event-images img {
   max-width: 100%;
+}
+
+.content-container li a {
+  color: $gray-base;
+}
+
+.content-container li a:hover {
+  color: $gray;
 }
 
 // TODO Style event images and content to change image and sizing for screen size
