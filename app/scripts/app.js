@@ -18,8 +18,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMap'
-  ])
+    'ngMap',
+    'ui.bootstrap'
+    ])
   .config(function($locationProvider, $routeProvider, $sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
       // Allow same origin resource loads.

@@ -9,6 +9,8 @@
  */
 angular.module('capstone2017App')
   .controller('EventsCtrl', function ($scope, $route, $routeParams, $location, indevents, NgMap) {
+    $scope.myInterval = 3000;
+
     // Sending route information to eventful API to get specific event information
     $scope.eventID = $routeParams.eventID;
     $scope.indevents = indevents.query ({

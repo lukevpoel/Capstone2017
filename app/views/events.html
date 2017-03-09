@@ -8,7 +8,15 @@
             <div class="event-images">
               <div ng-if="eventdata.images != null">
                 <div  ng-if="imagesArray">
-                  <img src="{{eventdata.images.image[0].large.url}}">
+                    <div id="slides">
+                      <div>
+                        <carousel interval="myInterval">
+                          <slide ng-repeat="image in eventdata.images.image" active="slide.active">
+                            <img ng-src="{{image.large.url}}">
+                          </slide>
+                        </carousel>
+                      </div>
+                    </div>
                 </div>
                 <img ng-if="imagesArray==false" src="{{eventdata.images.image.large.url}}">
               </div>
