@@ -1,7 +1,6 @@
   <div ng-controller="MainCtrl">
     <h1>Find your favorite events</h1>
-    <h2>With the artist's best music!<br>
-    For now, just type in zip code for any functionality</h2>
+    <h2></h2>
     <div class="row">
         <div  class="col-sm-2 col-xs-4">
           Date: <br>
@@ -14,8 +13,8 @@
           </select>
         </div>
         <div  class="col-sm-3 col-xs-4">
-          Zip Code: <br>
-          <input ng-model="location" type="number" ng-pattern='/^(\d{5}(-\d{4})?|[A-Z]\d[A-Z] *\d[A-Z]\d)$/' class="select-field" id="zip-code" placeholder="98101">
+          City or Zip Code: <br>
+          <input ng-model="location" type="text" class="select-field" id="zip-code" placeholder="98101">
         </div>
         <div class="col-sm-3 col-xs-6">
           Keyword: <br>
@@ -27,15 +26,22 @@
         </div>
     </div>
     <div id="event-container">
-      <div ng-if="searchLocation || searchWithin || searchKeyword || searchTime" class="eventsFound">
+      <div ng-if="searchLocation || searchKeyword || searchTime" class="eventsFound">
+            <!-- Logic to show what was searched for -->
                 <h1>Your events
-                  <span ng-if="searchLocation == null">in {{eventdata[0].city_name}} etc.</span>
+                  <span ng-if="searchLocation == null">in {{eventdata.event[0].city_name}} etc.</span>
                   <span ng-if="searchWithin == null && searchLocation">in {{location}}</span>
                   <span ng-if="searchWithin && searchLocation">within {{within}} miles of {{location}}</span>
                   <span ng-if="searchTime"> for {{time}}</span></h1>
+
+                <!-- Individual events. Events per page = 10 -->
                 <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                   <div class="event-wrapper">
-                    <div class="col-xs-12"><h2><a ng-href="#!/events/{{event.id}}" alt="event link">{{event.title}}</a></h2></div>
+                    <div class="col-xs-12">
+                      <div class="event-title">
+                        <h2><a ng-href="#!/events/{{event.id}}" alt="event link">{{event.title}}</a></h2>
+                      </div>
+                    </div>
                     <div class="row">
                       <div class="col-sm-6 col-xs-12 ind-events">
                         <div class="interior-events">
@@ -50,6 +56,12 @@
                               <span ng-if="event.performers.performer.name">
                                 {{event.performers.performer.name}}
                               </span>
+                            </div>
+                            <div ng-if="event.description == null">
+                              No event description available
+                            </div>
+                            <div ng-if="event.description != null"  ng-bind-html="event.description | limitTo:descLength"> 
+                              {{event.description | limitTo:descLength}}
                             </div>
                           </div>
                         </div>

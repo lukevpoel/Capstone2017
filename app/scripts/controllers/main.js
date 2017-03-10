@@ -13,7 +13,7 @@
 angular.module('capstone2017App')
 
   .controller('MainCtrl', function ($scope, $route, $routeParams, $location, events) {
-
+    // Selection controller variables
     $scope.dates = [
       'All',
       'Today',
@@ -45,6 +45,7 @@ angular.module('capstone2017App')
     ];
     $scope.keywords = null;
 
+    // See events button logic
     $scope.refreshCurrent = function(time, within, location, keywords){
         $scope.events = events.query({
           location: location,
@@ -60,6 +61,8 @@ angular.module('capstone2017App')
         $scope.searchTime = $scope.time;
     };
 
+    // Limit description length
+    $scope.descLength = 300;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
