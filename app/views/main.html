@@ -32,7 +32,7 @@
                   <span ng-if="searchLocation == null">in {{eventdata.event[0].city_name}} etc.</span>
                   <span ng-if="searchWithin == null && searchLocation">in {{location}}</span>
                   <span ng-if="searchWithin && searchLocation">within {{within}} miles of {{location}}</span>
-                  <span ng-if="searchTime"> for {{time}}</span></h1>
+                  <span ng-if="searchTime"> for <span ng-if="time == All">All Dates</span><span ng-if="time != All"> {{time}}</span></span></h1>
 
                 <!-- Individual events. Events per page = 10 -->
                 <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
@@ -60,7 +60,7 @@
                             <div ng-if="event.description == null">
                               No event description available
                             </div>
-                            <div ng-if="event.description != null"  ng-bind-html="event.description | limitTo:descLength"> 
+                            <div ng-if="event.description != null"  ng-bind-html="event.description | limitTo:descLength">
                               {{event.description | limitTo:descLength}}
                             </div>
                           </div>

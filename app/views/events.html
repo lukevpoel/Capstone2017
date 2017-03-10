@@ -25,6 +25,9 @@
           <div class="col-md-4">
             <p>{{eventdata.title}} is at {{eventdata.venue_name}}</p>
             <p>Maps to the event {{eventdata.address}}, {{eventdata.city}}, {{eventdata.region}} {{eventdata.postal_code}}</p>
+            <p ng-bind-html="eventdata.description">
+              {{eventdata.description}}
+            </p>
           </div>
         </div>
         <div id="map" class="row">
