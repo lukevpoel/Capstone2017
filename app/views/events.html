@@ -4,7 +4,7 @@
           <h4><a href="{{eventdata.url}}">View on Eventful</a></h4>
         </div>
         <div class="row">
-          <div class="col-md-8 col-sm-12">
+          <div class="col-xs-12">
             <div class="event-images">
               <div ng-if="eventdata.images != null">
                 <div  ng-if="imagesArray">
@@ -22,12 +22,18 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-xs-12">
             <p>{{eventdata.title}} is at {{eventdata.venue_name}}</p>
             <p>Maps to the event {{eventdata.address}}, {{eventdata.city}}, {{eventdata.region}} {{eventdata.postal_code}}</p>
             <p ng-bind-html="eventdata.description">
               {{eventdata.description}}
             </p>
+            <div class="eventful-badge eventful-medium">
+              <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
+              alt="Local Events, Concerts, Tickets">
+              <p><a href="http://eventful.com/">Events</a> by Eventful</p>
+            </div>
+
           </div>
         </div>
         <div id="map" class="row">

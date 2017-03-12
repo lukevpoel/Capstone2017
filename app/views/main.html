@@ -52,6 +52,9 @@
                       <div class="col-sm-6 col-xs-12 ind-events">
                         <div class="interior-events">
                           <a href="{{event.venue_url}}" alt="venue link">at {{event.venue_name}}</a>
+                            <div class="event-date">
+                              {{event.start_time | date : longDate}}
+                            </div>
                             <div ng-if="event.performers">Performed by
                               <span ng-if="event.performers.performer.name">
                                 {{event.performers.performer.name}}
@@ -60,8 +63,13 @@
                             <div ng-if="event.description == null">
                               No event description available
                             </div>
-                            <div ng-if="event.description != null"  ng-bind-html="event.description | limitTo:descLength">
+                            <div ng-if="event.description != null"  ng-bind-html="event.description | limitTo:descLength" class="event-description">
                               {{event.description | limitTo:descLength}}
+                            </div>
+                            <div class="eventful-badge eventful-medium">
+                              <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
+                              alt="Local Events, Concerts, Tickets">
+                              <p><a href="http://eventful.com/">Events</a> by Eventful</p>
                             </div>
                           </div>
                         </div>

@@ -1,7 +1,18 @@
 
+
+// General
 .content-container {
   padding-bottom: 60px;
   width: 100%;
+}
+
+
+a {
+  color: $gray-base;
+}
+
+a:hover {
+  color: $gray;
 }
 
 .event-wrapper {
@@ -12,6 +23,7 @@
   border-radius: 10px;
 }
 
+// Event shown styling based on ng-ifs
 #event-container {
   .ind-events {
     .interior-events {
@@ -26,8 +38,14 @@
     max-width: 100%;
     position: relative;
     position: top;
+    padding-left: 10px;
+
   }
 
+}
+
+.event-description {
+  padding-right: 10px;
 }
 
 .event-images{
@@ -39,14 +57,7 @@
   }
 }
 
-.content-container li a {
-  color: $gray-base;
-}
-
-.content-container li a:hover {
-  color: $gray;
-}
-
+// Map styling
 #map {
   margin-top: 10px;
 }
@@ -54,7 +65,6 @@
 ng-map {
   height: 30em;
   width: 100%;
-
 }
 
 // TODO Style event images and content to change image and sizing for screen size
