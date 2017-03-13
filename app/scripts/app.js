@@ -19,7 +19,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMap',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'angulartics',
+    'angulartics.google.analytics'
     ])
   .config(function($locationProvider, $routeProvider, $sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([

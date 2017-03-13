@@ -27,30 +27,32 @@
             <p ng-bind-html="eventdata.description | email">
               {{eventdata.description | email}}
             </p>
-            <h4><a href="{{eventdata.performers.performer.url}}">View this artist on Eventful</a></h4>
-            <h4><a href="{{eventdata.url}}">View this event on Eventful</a></h4>
+            <h4><a href="{{eventdata.performers.performer.url}}" analytics-on="click"analytics-on analytics-event="eventful-visit">View this artist on Eventful</a></h4>
+            <h4><a href="{{eventdata.url}}" analytics-on analytics-event="eventful-visit">View this event on Eventful</a></h4>
             <div class="eventful-badge eventful-medium">
               <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
               alt="Local Events, Concerts, Tickets">
-              <p><a href="http://eventful.com/">Events</a> by Eventful</p>
+              <p><a href="http://eventful.com/" analytics-on analytics-event="eventful-visit">Events</a> by Eventful</p>
             </div>
 
           </div>
         </div>
         <div id="map" class="row">
           <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
-            <ng-map default-style="false" center="{{eventdata.latitude}},{{eventdata.longitude}}" zoom="12" min-zoom="8">
+            <ng-map default-style="false" center="{{eventdata.latitude}},{{eventdata.longitude}}" zoom="12" min-zoom="8" analytics-on="click" analytics-event="map-click">
               <marker
                 id="eventmarker"
                 position="{{eventdata.latitude}},{{eventdata.longitude}}"
                 title="{{eventdata.venue_name}}"
-                on-click="map.showInfoWindow('markerPopup')">
+                on-click="map.showInfoWindow('markerPopup')"
+                analytics-on
+                analytics-event="marker-click">
               </marker>
               <info-window id="markerPopup">
                 <div ng-non-bindable>
-                  <em><a ng-href="http://eventful.com/{{eventdata.venue_id}}">{{eventdata.venue_name}}</a></em><br/>
+                  <em><a ng-href="http://eventful.com/{{eventdata.venue_id}}" alt="eventful venue" analytics-on analytics-event="eventful-visit">{{eventdata.venue_name}}</a></em><br/>
                   {{eventdata.venue_type}}<br/>
-                  <a ng-href="http://maps.google.com/maps?z=12&t=m&q=loc:{{eventdata.latitude}}+{{eventdata.longitude}}" alt="maps link">
+                  <a ng-href="http://maps.google.com/maps?z=12&t=m&q=loc:{{eventdata.latitude}}+{{eventdata.longitude}}" alt="maps link" analytics-on analytics-event="maps-visit">
                     Get Directions!<br/>
                     {{eventdata.address}}<br/>
                     {{eventdata.city}}, {{eventdata.region}}<br/></a>

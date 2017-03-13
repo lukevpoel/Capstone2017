@@ -4,25 +4,25 @@
     <div class="row">
         <div  class="col-sm-2 col-xs-6">
           Date: <br>
-          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field" ent-key="refreshCurrent(time, within, location, keywords)">
+          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field" ent-key="refreshCurrent(time, within, location, keywords)" analytics-event="date-select">
           </select>
         </div>
         <div  class="col-sm-1 col-xs-6 within-select">
           Within: <br>
-          <select ng-model="within" ng-options="x for x in distance"id="within-range" name="Choose-within" class="select-field" ent-key="refreshCurrent(time, within, location, keywords)">
+          <select ng-model="within" ng-options="x for x in distance"id="within-range" name="Choose-within" class="select-field" ent-key="refreshCurrent(time, within, location, keywords)" analytics-event="distance-select">
           </select> Miles
         </div>
         <div  class="col-sm-3 col-xs-12">
           City or Zip Code: <br>
-          <input ng-model="location" type="text" class="select-field" id="zip-code" ent-key="refreshCurrent(time, within, location, keywords)" placeholder="98101">
+          <input ng-model="location" type="text" class="select-field" id="zip-code" ent-key="refreshCurrent(time, within, location, keywords)" placeholder="98101" analytics-event="location-select">
         </div>
         <div class="col-sm-3 col-xs-12">
           Keyword: <br>
-          <input ng-model="keywords" type="text" class="select-field" id="keyword-input" ent-key="refreshCurrent(time, within, location, keywords)" placeholder="Michael Jackson">
+          <input ng-model="keywords" type="text" class="select-field" id="keyword-input" ent-key="refreshCurrent(time, within, location, keywords)" placeholder="Michael Jackson" analytics-event="keyword-select">
         </div>
         <div class="col-sm-2 col-xs-12">
           <br>
-          <a class="select-field btn btn-lg btn-primary" ng-click="refreshCurrent(time, within, location, keywords)">Find events!</a>
+          <a class="select-field btn btn-lg btn-primary" ng-click="refreshCurrent(time, within, location, keywords)" analytics-on="click" analytics-event="find-events">Find events!</a>
         </div>
     </div>
     <div id="event-container">
@@ -39,7 +39,7 @@
                   <div class="event-wrapper">
                     <div class="col-xs-12">
                       <div class="event-title">
-                        <h2><a ng-href="#!/events/{{event.id}}" alt="event link">{{event.title}}</a></h2>
+                        <h2><a ng-href="#!/events/{{event.id}}" alt="event link" analytics-on="click" analytics-event="open-event">{{event.title}}</a></h2>
                       </div>
                     </div>
                     <div class="row">
