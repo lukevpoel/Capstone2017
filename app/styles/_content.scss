@@ -28,8 +28,9 @@ a:hover {
   .ind-events {
     .interior-events {
       max-width: 500px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 5px;
+      padding: 12px;
     }
   padding: 5px;
   }
@@ -38,8 +39,6 @@ a:hover {
     max-width: 100%;
     position: relative;
     position: top;
-    padding-left: 10px;
-
   }
 
 }
@@ -49,7 +48,6 @@ a:hover {
 }
 
 .event-description {
-  padding-right: 10px;
 }
 
 .event-images{
