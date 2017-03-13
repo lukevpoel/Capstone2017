@@ -4,21 +4,21 @@
     <div class="row">
         <div  class="col-sm-2 col-xs-6">
           Date: <br>
-          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field">
+          <select ng-model="time" ng-options="x for x in dates"id="date-range" name="Choose-date" class="select-field" ent-key="refreshCurrent(time, within, location, keywords)">
           </select>
         </div>
         <div  class="col-sm-1 col-xs-6 within-select">
           Within: <br>
-          <select ng-model="within" ng-options="x for x in distance"id="within-range" name="Choose-within" class="select-field">
+          <select ng-model="within" ng-options="x for x in distance"id="within-range" name="Choose-within" class="select-field" ent-key="refreshCurrent(time, within, location, keywords)">
           </select> Miles
         </div>
         <div  class="col-sm-3 col-xs-12">
           City or Zip Code: <br>
-          <input ng-model="location" type="text" class="select-field" id="zip-code" placeholder="98101">
+          <input ng-model="location" type="text" class="select-field" id="zip-code" ent-key="refreshCurrent(time, within, location, keywords)" placeholder="98101">
         </div>
         <div class="col-sm-3 col-xs-12">
           Keyword: <br>
-          <input ng-model="keywords" type="text" class="select-field" id="keyword-input" placeholder="Michael Jackson">
+          <input ng-model="keywords" type="text" class="select-field" id="keyword-input" ent-key="refreshCurrent(time, within, location, keywords)" placeholder="Michael Jackson">
         </div>
         <div class="col-sm-2 col-xs-12">
           <br>
