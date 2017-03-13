@@ -5,6 +5,8 @@
  * @name capstone2017App.directive:entKey
  * @description
  * # entKey
+ * Adds the enter key to the input fields allowing user
+ * to refresh the search without needing to use the mouse to click refresh
  */
 angular.module('capstone2017App')
 .directive('entKey', function () {

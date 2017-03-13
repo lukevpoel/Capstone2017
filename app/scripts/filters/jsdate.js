@@ -7,6 +7,8 @@
  * @description
  * # jsDate
  * Filter in the capstone2017App.
+ * Allows dates to be formatted correctly by getting the string from the API
+ * and returning a javascript date object.
  */
 angular.module('capstone2017App')
 .filter('jsDate', function () {

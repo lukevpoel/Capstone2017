@@ -3,6 +3,8 @@
           <h2>{{eventdata.title}}</h2>
         </div>
         <div class="row">
+          
+          <!-- All event images here. If multiple images, carousel displays. Shows single image if that is available. Or shows placeholder image. -->
           <div class="col-xs-12">
             <div class="event-images">
               <div ng-if="eventdata.images != null">
@@ -21,6 +23,9 @@
               </div>
             </div>
           </div>
+
+          <!-- The event description. Minor problem where some links will extend the page to the right
+                unnecessarily. TODO Solve this bug -->
           <div class="col-xs-12">
             <p>{{eventdata.title}} at {{eventdata.venue_name}}</p>
 
@@ -37,6 +42,8 @@
 
           </div>
         </div>
+
+        <!-- Google maps and markers -->
         <div id="map" class="row">
           <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
             <ng-map default-style="false" center="{{eventdata.latitude}},{{eventdata.longitude}}" zoom="12" min-zoom="8" analytics-on="click" analytics-event="map-click">

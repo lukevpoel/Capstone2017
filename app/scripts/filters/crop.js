@@ -7,6 +7,8 @@
  * @description
  * # crop
  * Filter in the capstone2017App.
+ * Allows truncation of primary text in main.html
+ * Truncates by words and adds ellipses
  */
 angular.module('capstone2017App')
   .filter('crop', function(){

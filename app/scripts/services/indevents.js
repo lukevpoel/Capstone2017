@@ -6,6 +6,7 @@
  * @description
  * # indevents
  * Factory in the capstone2017App.
+ * Used for the events view.
  */
 angular.module('capstone2017App')
   .factory('indevents', function ($http) {

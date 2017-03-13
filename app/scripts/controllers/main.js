@@ -61,7 +61,7 @@ angular.module('capstone2017App')
         $scope.searchTime = $scope.time;
     };
 
-    // Limit description length
+    // Limit description length - unnecessary with crop filter
     $scope.descLength = 300;
     this.awesomeThings = [
       'HTML5 Boilerplate',

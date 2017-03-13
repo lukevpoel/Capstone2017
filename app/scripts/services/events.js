@@ -6,6 +6,7 @@
  * @description
  * # events
  * Factory in the capstone2017App.
+ * Main API call for main.html
  */
 angular.module('capstone2017App')
   .factory('events', function ($http) {

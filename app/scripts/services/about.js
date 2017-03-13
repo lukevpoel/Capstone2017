@@ -6,6 +6,7 @@
  * @description
  * # about
  * Factory in the capstone2017App.
+ * Meaningless controllerright now.
  */
 angular.module('capstone2017App')
   .factory('about', function () {

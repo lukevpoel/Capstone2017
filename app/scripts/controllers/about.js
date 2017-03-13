@@ -6,6 +6,7 @@
  * @description
  * # AboutCtrl
  * Controller of the capstone2017App
+ * Not in use
  */
 angular.module('capstone2017App')
   .controller('AboutCtrl', function () {
