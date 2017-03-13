@@ -1,7 +1,6 @@
 <div ng-controller="EventsCtrl" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
         <div class="row">
           <h2>{{eventdata.title}}</h2>
-          <h4><a href="{{eventdata.url}}">View on Eventful</a></h4>
         </div>
         <div class="row">
           <div class="col-xs-12">
@@ -23,11 +22,13 @@
             </div>
           </div>
           <div class="col-xs-12">
-            <p>{{eventdata.title}} is at {{eventdata.venue_name}}</p>
-            <p>Maps to the event {{eventdata.address}}, {{eventdata.city}}, {{eventdata.region}} {{eventdata.postal_code}}</p>
+            <p>{{eventdata.title}} at {{eventdata.venue_name}}</p>
+
             <p ng-bind-html="eventdata.description">
               {{eventdata.description}}
             </p>
+            <h4><a href="{{eventdata.performers.performer.url}}">View this artist on Eventful</a></h4>
+            <h4><a href="{{eventdata.url}}">View this event on Eventful</a></h4>
             <div class="eventful-badge eventful-medium">
               <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
               alt="Local Events, Concerts, Tickets">
@@ -47,10 +48,12 @@
               </marker>
               <info-window id="markerPopup">
                 <div ng-non-bindable>
-                  <em>{{eventdata.venue_name}}</em><br/>
+                  <em><a ng-href="http://eventful.com/{{eventdata.venue_id}}">{{eventdata.venue_name}}</a></em><br/>
                   {{eventdata.venue_type}}<br/>
-                  <a ng-href="http://maps.google.com/maps?z=12&t=m&q=loc:{{eventdata.latitude}}+{{eventdata.longitude}}" alt="maps link">{{eventdata.address}}<br/>
-                  {{eventdata.city}}, {{eventdata.region}}<br/></a>
+                  <a ng-href="http://maps.google.com/maps?z=12&t=m&q=loc:{{eventdata.latitude}}+{{eventdata.longitude}}" alt="maps link">
+                    Get Directions!<br/>
+                    {{eventdata.address}}<br/>
+                    {{eventdata.city}}, {{eventdata.region}}<br/></a>
                 </div>
               </info-window>
             </ng-map>
