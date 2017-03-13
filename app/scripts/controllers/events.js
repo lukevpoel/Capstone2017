@@ -20,8 +20,8 @@ angular.module('capstone2017App')
     }).then(function(data){
       $scope.eventdata = data.data;
       $scope.imagesArray = angular.isArray(data.data.images.image);
+      $scope.eventImages = data.data.images.image;
     });
-
 
     // Maps Logic
     $scope.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key=AIzaSyDM09EsXdiZzSBueXZYwxv0fhL2_LXbBAs';
@@ -35,4 +35,16 @@ angular.module('capstone2017App')
       'AngularJS',
       'Karma'
     ];
-  });
+  })
+  .filter('email', function(){
+    return function(input){
+      if (input === null || input === undefined){
+        return input;
+      }
+      else if (input) {
+        var email = String(input).replace(/\**\*/, '');
+        return email;
+      }
+    };
+  })
+  ;
