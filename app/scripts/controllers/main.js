@@ -16,6 +16,8 @@ angular.module('capstone2017App')
     // Selection controller variables
     $scope.dates = [
       'All',
+      'Future',
+      'Past',
       'Today',
       'This Week',
       'Next Week',

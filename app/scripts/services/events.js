@@ -21,7 +21,7 @@ angular.module('capstone2017App')
             'app_key': 'mhNWqRwCNqmxbkrL',
             location: eventparams.location,
             within: eventparams.within,
-            time: eventparams.time,
+            date: eventparams.time,
             keywords: eventparams.keywords,
             'image_sizes': 'large'
           }
