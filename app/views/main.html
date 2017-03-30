@@ -35,21 +35,19 @@
                   <span ng-if="searchTime"> for <span ng-if="time == All">All Dates</span><span ng-if="time != All"> {{time}}</span></span></h1>
 
                 <!-- Individual events. Events per page = 10 -->
-                <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                  <div class="event-wrapper">
-                    <div class="col-xs-12">
-                      <div class="event-title">
-                        <h2><a ng-href="#!/events/{{event.id}}" alt="event link" analytics-on="click" analytics-event="open-event">{{event.title}}</a></h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6 col-xs-12 ind-events">
-                        <div class="interior-events">
+                <div ng-model="eventsDisplay" ng-repeat="event in eventdata.event" class="col-sm-6 col-xs-12 col-md-4 col-xl-3 event-wrapper">
+                      <div class="col-xs-12 ind-events">
+                        <div class="interior-events"><a ng-href="#!/events/{{event.id}}" alt="event link" analytics-on="click" analytics-event="open-event">
                           <div ng-if="event.image == null"><img src="images/sixteenth-note.jpg" class="event-image" alt="placeholder image"></div>
-                          <div ng-if="event.image"><img src="{{event.image.large.url}}" class="event-image" alt="{{event.title}} Image"></div>
+                          <div ng-if="event.image"><img src="{{event.image.large.url}}" class="event-image" alt="{{event.title}} Image"></div></a>
                         </div>
                       </div>
-                      <div class="col-sm-6 col-xs-12 ind-events">
+                      <div class="col-xs-12">
+                        <div class="event-title">
+                          <h2><a ng-href="#!/events/{{event.id}}" alt="event link" analytics-on="click" analytics-event="open-event">{{event.title}}</a></h2>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 ind-events">
                         <div class="interior-events">
                           <a href="{{event.venue_url}}" alt="venue link">at {{event.venue_name}}</a>
                             <div class="event-date">
@@ -72,10 +70,6 @@
                             </div>
                           </div>
                         </div>
-                    </div>
-                      <div class="col-xs-12">
-                      </div>
-                    </div>
                 </div>
       </div>
     </div>
