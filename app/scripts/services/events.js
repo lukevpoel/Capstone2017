@@ -23,7 +23,8 @@ angular.module('capstone2017App')
             within: eventparams.within,
             date: eventparams.time,
             keywords: eventparams.keywords,
-            'image_sizes': 'large'
+            'image_sizes': 'large',
+            'page_size': '12'
           }
         });
       }
