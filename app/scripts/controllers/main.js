@@ -56,6 +56,7 @@ angular.module('capstone2017App')
           keywords: keywords
         }).then(function(data){
           $scope.eventdata = data.data.events;
+          $scope.eventTrue = data.data;
         });
         $scope.searchLocation = $scope.location;
         $scope.searchWithin = $scope.within;
